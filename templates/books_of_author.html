@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+
+</head>
+<body>
+<h2>{{ author_obj.name }}写的书：</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <td>编号</td>
+                        <td>名称</td>
+                        <td>价格</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in book_list %}
+                        <tr>
+                            <td>{{ book.pk }}</td>
+                            <td>{{ book.title }}</td>
+                            <td>{{ book.price }}</td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
